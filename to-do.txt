@@ -1,0 +1,25 @@
+1. **Marginal performance gains** Rough draft: Idea is to propose a novel loss function that incorporate global information into loss function, time/convergence faster, better sil score, we anticipate that adv will be more obvious on larger dataset. (Add- what sil score improvement is bringing into picture)still -- quote-example SCL/triplet ---- some work good in one domain, some in another. 
+
+
+ average over multiple seeds- rewrite - we have reran exp with multiple seeds and the resutls are consistent with what wew have reported previously, w will report final results in 
+
+
+ active voice
+
+ computation - add dtails of plot - specific- gloss time, other losses time, forward pass, graph construction lpa operations time 
+
+ cange the formatiing color font of plot - remove the 2nd plot and mark the forward pass for gloss in the first plot 
+
+ hyperparameter - ablation study parameter window where model stabitiy is good, that window is consistent across datasets. window is narrowing down the hyperparameter search space. prctioners/users dont need to tune 
+ classification task - range window
+ tornedo plot we will proviidng the senticvity snalyasis - we will identify the most sentisive and we can pick that from the optimal range instead of tuning. 
+
+
+
+
+ R2:
+ we will run significance test and have done the variance part ans story does not change--- p value 
+
+
+ R4: 
+ Global consistency - rethink and rewrtie -- consistent resutls - gloss performacnce
