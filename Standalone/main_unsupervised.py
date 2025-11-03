@@ -66,7 +66,7 @@ def main():
         torch.cuda.manual_seed(42)
     
     # Load data
-    data_dir = f"data/{args.dataset}/"
+    data_dir = f"../data/{args.dataset}/"
     train, val, test = load_data(data_dir)
     train_loader, val_loader, test_loader, num_labels = prepare_dataloaders(args, train, val, test)
     class_weights = compute_class_weights(train['label'])
