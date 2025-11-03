@@ -1,7 +1,11 @@
 # G-Loss: Graph-inspired fine-tuning of Language Models
 
-This repository contains a modular implementation of supervised text classification using BERT-based models with G-Loss functions and other loss functions, including Cross-Entropy (CE), and Supervised Contrastive Learning (SCL).
+This repository contains code to train and evaluate BERT-based text classifiers using graph-inspired loss functions (G-Loss), supervised contrastive loss (SCL) and standard cross-entropy (CE). The codebase includes a "Combined with CE" supervised training implementation and a "Standalone" unsupervised/contrastive implementation.
 
+## Highlights
+- Implementations: G-Loss (graph-based), SCL (supervised contrastive), CE (cross-entropy).
+- Training scripts with logging, checkpointing and Optuna hyperparameter search support.
+- Example datasets and toy splits included under `data/` for quick runs.
 ## Installation
 
 1. Clone the repository:
@@ -14,27 +18,37 @@ cd <repository-name>
 ```bash
 pip install -r requirements.txt
 ```
+## Project layout (important files)
 
+- `Combined with CE/` - Supervised training pipeline (CE + optional G-Loss or SCL components)
+  - `main.py` - entry point for supervised experiments
+  - `config.py` - CLI arguments and config defaults
+  - `models.py`, `losses.py`, `training.py`, `utils.py` - core code for model, loss, and training
+  - `supervised_checkpoint/` - training outputs and saved checkpoints
+- `Standalone/` - Standalone/unsupervised or contrastive experiments
+  - `main_unsupervised.py`, `training_unsupervised.py`, `losses_unsupervised.py`, etc.
+- `data/` - example datasets and toy datasets. The expected dataset structure is described below.
+  
 ## Usage
 
 ### Basic Training
 
 Train a model with Cross-Entropy loss:
 ```bash
-python main.py --dataset ohsumed --loss ce --bert_lr 2e-5
+python main.py --dataset ohsumed --loss ce --bert_lr 1e-5
 ```
 
 ### Training with G-Loss
 
 Train with Graph-based Loss:
 ```bash
-python main.py --dataset ohsumed --loss gloss --lam 0.5 --gamma 0.7 --sigma 1.0
+python main.py --dataset ohsumed --loss gloss --lam 0.8 --gamma 0.7 --sigma 0.667 
 ```
 
 ### Training with Supervised Contrastive Loss
 
 ```bash
-python main.py --dataset ohsumed --loss scl --temperature 0.1
+python main.py --dataset ohsumed --loss scl --temperature 0.3 --lam 0.9
 ```
 
 ### Hyperparameter Tuning with Optuna
