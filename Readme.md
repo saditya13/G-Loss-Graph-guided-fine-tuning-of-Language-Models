@@ -2,20 +2,6 @@
 
 This repository contains a modular implementation of supervised text classification using BERT-based models with G-Loss functions and other loss functions, including Cross-Entropy (CE), and Supervised Contrastive Learning (SCL).
 
-## Project Structure
-
-```
-.
-├── main.py                 # Main training script
-├── config.py              # Configuration and argument parsing
-├── models.py              # Model architectures
-├── losses.py              # Loss functions (G-Loss, SCL)
-├── training.py            # Training and evaluation functions
-├── utils.py               # Utility functions for data loading and preprocessing
-├── optuna_tuning.py       # Hyperparameter tuning with Optuna
-├── requirements.txt       # Python dependencies
-```
-
 ## Installation
 
 1. Clone the repository:
