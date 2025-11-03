@@ -1,4 +1,4 @@
-# Graph-inspired fine-tuning of Language Models
+# G-Loss: Graph-inspired fine-tuning of Language Models
 
 This repository contains a modular implementation of supervised text classification using BERT-based models with G-Loss functions and other loss functions, including Cross-Entropy (CE), and Supervised Contrastive Learning (SCL).
 
@@ -81,7 +81,7 @@ python main.py --dataset ohsumed --loss gloss --sigmafn root
 - `--lam`: Lambda parameter for G-Loss (default: None)
 - `--gamma`: Gamma parameter for G-Loss (default: None)
 - `--sigma`: Sigma parameter for G-Loss (default: None)
-- `--temperature`: Temperature parameter for SCL (default: 0.1)
+- `--temperature`: Temperature parameter for SCL (default: 0.3)
 - `--sigmafn`: Sigma computation method (choices: mst, root)
 
 ### Optuna Arguments
