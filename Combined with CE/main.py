@@ -67,7 +67,7 @@ def main():
         torch.cuda.manual_seed(42)
 
     # Load data
-    data_dir = f"data/{args.dataset}/"
+    data_dir = f"../data/{args.dataset}/"
     train, val, test = load_data(data_dir)
     logger.info(f"Train samples: {len(train)} | Val samples: {len(val)} | Test samples: {len(test)}")
 
