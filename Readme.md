@@ -143,9 +143,6 @@ Utility functions for:
 ### optuna_tuning.py
 Hyperparameter optimization using Optuna framework.
 
-### config.py
-Command-line argument parsing and configuration.
-
 ## Citation
 
 If you use this code, please cite the relevant papers for:
