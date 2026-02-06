@@ -1,6 +1,9 @@
 # G-Loss: Graph-inspired fine-tuning of Language Models
 
-This repository contains code to train and evaluate BERT-based text classifiers using graph-inspired loss functions (G-Loss), supervised contrastive loss (SCL) and standard cross-entropy (CE). The codebase includes a "Combined with CE" supervised training implementation and a "Standalone" unsupervised/contrastive implementation.
+This repository contains the implementation code of the paper accepted in LoG Conference 2025, [G-Loss: Graph-guided-fine-tuning-of-Language-Models](https://openreview.net/pdf?id=8DIZVVKSra)
+We provide below the code to train and evaluate BERT-based text classifiers using graph-inspired loss functions (G-Loss), supervised contrastive loss (SCL), and standard cross-entropy (CE). The codebase includes a "Combined with CE" supervised training implementation and a "Standalone" unsupervised/contrastive implementation.
+
+
 
 ## Highlights
 - Implementations: G-Loss (graph-based), SCL (supervised contrastive), CE (cross-entropy).
